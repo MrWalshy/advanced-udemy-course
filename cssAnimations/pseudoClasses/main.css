@@ -1,0 +1,68 @@
+h1:hover {
+    background-color: red;
+}
+
+#exampleBtn:hover {
+    color: white;
+}
+
+#exampleBtn:focus {
+    border-radius: 10px;
+    background-color: #4ee5f4;
+}
+
+input:focus {
+    background-color: red;
+}
+
+#exampleBtn:active {
+    background-color: orange;
+    font-size: 2rem;
+}
+
+p:active {
+    color: yellow;
+}
+
+/* EXERCISE */
+#btn1:active {
+    background-color: purple;
+}
+
+#btn2:hover {
+    background-color: green;
+}
+
+#btn3:focus {
+    background-color: orange;
+}
+
+/* Animated Button */
+#animatedBtn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    background-color: #fcad26;
+    font-size: 16px;
+    font-weight: 300px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 25px 80px;
+    margin: 0 auto; /* Center horizontally */
+    border-radius: 20px;
+    /* box-shadow: x-offset, y-offset, color */
+    box-shadow: 0 6px #efa424;
+}
+
+#animatedBtn:hover {
+    box-shadow: 0 3px #efa424;
+    top: 3px; /* position: relative; allows this. */
+}
+
+#animatedBtn:active {
+    box-shadow: none;
+    top: 6px;
+}

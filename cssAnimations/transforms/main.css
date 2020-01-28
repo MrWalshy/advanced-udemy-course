@@ -1,0 +1,41 @@
+p {
+    width: 50px;
+    height: 50px;
+    background-color: #1abc9c;
+    border: 2px solid;
+}
+
+.move-right {
+    background-color: #3498db;
+    transform: translateX(100px);
+}
+
+.move-down {
+    background-color: #f1c40f;
+    transform: translateY(20px);
+}
+
+/* p:hover {
+    transform: translate(20px, 20px);
+} */
+
+/* Scaling */
+.transformed {
+    background-color: #3498db;
+    /* Setting the origin to '0 0', x & y offset respectively,
+    sets the origin to the top left of the original element.
+    'left top' will also give the same result */
+    /* This scales from the top left of the original element */
+    transform-origin: left top;
+    transform: scale(2, 3);
+}
+
+/* Rotations */
+.rotated {
+    background-color: #9b59b6;
+    transform: rotate(45deg) scale(0.75);
+    /* Adding another transform will override the original. Instead
+    specify the transform properties, to be modified, all in one use */
+    /* transform: scale(0.5); */
+    transform-origin: right bottom;
+}

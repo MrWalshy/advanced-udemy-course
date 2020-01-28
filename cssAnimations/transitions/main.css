@@ -1,0 +1,55 @@
+.box {
+    background-color: #9b59b6;
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.box:hover {
+    background-color: #e74c3c;
+    transform-origin: top left;
+    transform: scale(2);
+    /* opacity: 0.5; */
+    border-radius: 50px;
+}
+
+.animated {
+    /* Here, background-color takes 1 second 
+    & border-radius takes 2 seconds to complete the animation */
+    transition-property: background-color, border-radius;
+    transition-duration: 1s, 2s;
+    /* background-color waits 1 second before animating,
+    border-radius waits 3 seconds before animating */
+    transition-delay: 1s, 3s;
+}
+
+.crazyBox {
+    background-color: #9b59b6;
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.crazyBox:hover {
+    transform: translateX(100px);
+    background-color: teal;
+}
+
+.crazyAnimation {
+    /* The 'transition' keyword does all 4 lines below in 1 line */
+    /* 'transition' can also take CSV's for multiple animations */
+    transition: transform 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1s,
+                background-color 0.5s linear;
+    /* transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition-delay: 1s; */
+}
