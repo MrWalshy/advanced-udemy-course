@@ -1,0 +1,80 @@
+/* 
+Animate the sky first.
+When animating the sky color, use 0% 10% 30% 70% 90% 100%.
+Animate the sun second.
+Use 0% 25% 50% 75% 100%.
+*/
+
+body {
+    margin: 0 0 0 0;
+    background-color: #2c3e50;
+
+    animation-name: skyAnimation;
+    animation-duration: 20s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+.grass {
+    background: green;
+    height: 600px;
+    width: 100%;
+    position: absolute;
+}
+
+.sun {
+    background: #f1c40f;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    animation-name: sunAnimation;
+    animation-duration: 20s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes skyAnimation {
+    0% {
+        background-color: #2c3e50;
+    }
+    10% {
+        background-color: rgb(255, 191, 202);
+    }
+    30% {
+        background-color: rgba(95, 183, 255, 0.932);
+    }
+    70% {
+        background-color: rgba(95, 183, 255, 0.932);
+    }
+    90% {
+        background-color: rgb(255, 191, 202);
+    }
+    100% {
+        background-color: #2c3e50;
+    }
+}
+
+@keyframes sunAnimation {
+    0% {
+        transform: translate(-100px, 200px);
+        background-color: orange;
+    }
+    25% {
+        transform: translate(400px, 0px);
+        background-color: rgb(255, 208, 0);
+    }
+    50% {
+        transform: translate(800px, -50px);
+    }
+    75% {
+        transform: translate(1200px, 0px);
+        background-color: rgb(255, 208, 0);
+    }
+    100% {
+        transform: translate(1600px, 200px);
+        background-color: rgb(255, 51, 0);
+    }
+}
