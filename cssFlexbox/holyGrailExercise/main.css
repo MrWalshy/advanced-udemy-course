@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: green;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    display: flex;
+    height: 80vh;
+}
+
+article {
+    flex: 3 1 60%;
+}
+
+nav {
+    flex-basis: 20%;
+    order: -1;
+    background-color: lightslategray;
+}
+
+aside {
+    flex-basis: 20%;
+    order: 2;
+    background-color: lightskyblue;
+}
+
+footer {
+    background-color: green;
+    height: 12vh;
+}
+
+@media screen and (max-width: 640px){
+    main {
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    article {
+        order: -2;
+        flex-basis: 800px;
+    }
+}
