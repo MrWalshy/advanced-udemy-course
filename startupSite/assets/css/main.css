@@ -100,6 +100,8 @@ header {
     animation: 1s fadeIn 0.5s forwards;
     opacity: 0;
     color: #fff;
+
+    z-index: 1; /* Fixes broken hover effect by placing Header in front of the hero */
 }
 
 header h2 {
