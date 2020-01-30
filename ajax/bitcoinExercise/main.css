@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    opacity: 0.80;
+    color: white;
+}
+
+#logo {
+    padding: 16px;
+}
+
+.container {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: 1s fadeIn 200ms forwards;
+}
+
+.title {
+    font-size: 48px;
+    margin: 16px 0;
+}
+
+#price {
+    color: green;
+    text-decoration: underline;
+}
+
+#refresh {
+    text-decoration: none;
+    opacity: 0.75;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: black;
+    padding: 20px 32px;
+}
+
+#refresh:hover {
+    opacity: 1;
+}
+
+.subtitle {
+    font-size: 32px;
+    font-weight: lighter;
+    margin: 8px 0;
+}
+
+form {
+    margin-top: 16px;
+}
+
+form .container {
+    padding: 0;
+}
+
+.form-group {
+    margin: 8px 0;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
