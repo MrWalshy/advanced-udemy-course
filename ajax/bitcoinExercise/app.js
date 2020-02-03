@@ -30,7 +30,7 @@ btn.addEventListener("click", () => {
                     break;
             }
         } else {
-            console.log("Encountered a problem...") // This runs on every button click twice???
+            console.log("Encountered a problem...") // This runs on every button click three times???
         }
     }
 
