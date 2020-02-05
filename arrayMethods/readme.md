@@ -78,3 +78,11 @@ array.reduce((accumulator, nextValue, index, array) => {
     // Anything returned inside here becomes the value of the 
     // accumulator in the next iteration 
 }, optionalSecondParam);
+
+## RECAP
+- forEach iterates over an array, running a callback on each value and returns undefined
+- map creates a new array, running a callback on each value and pushes the result of each callback in the new array
+- filter creates a new array, running a callback on each value and if the result of the callback returns true, that value is added to the new array
+- some iterates through an array, running a callback on each value, if the callback for at least one value returns true, some returns true, otherwise false
+- every iterates through an array, running a callback on each value. If the callback returns false, every returns false, otherwise true.
+- reduce returns an accumulated value determined by the result of what has been returned to each callback
