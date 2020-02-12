@@ -309,5 +309,68 @@ let log = text => console.log(text);
         name: "Fred",
         isWorking: false
     }
-
+    // Passing in 'instructor' object to 'displayInfo' function
     displayInfo(instructor); // ["Fred", false]
+
+## Array Destructuring
+- Extract values from arrays into distinct variables
+
+### Example (Destructuring an Array)
+    // ES5
+    var arr = [1, 2, 3];
+    
+    var a = arr[0];
+    var b = arr[1];
+    var c = arr[2];
+
+    console.log(b) // 2
+
+    // ES2015
+    // Using array square brackets
+    var [a, b, c] = arr;
+
+    console.log(c) // 3
+
+### Example (Destructuring arrays with a function)
+    // ES5
+    function returnNums(a, b){
+        return [a, b];
+    }
+
+    var first = returnNums(3, 7)[0];
+    var second = returnNums(3, 7)[1];
+
+    console.log(first); // 3
+
+    // ES2015
+    var [first, second] = returnNums(3, 7);
+
+    console.log(second); // 7
+
+### Example (Swapping Values with Destructuring)
+    // ES5
+    function swap(a, b){
+        var temp = a;
+        a = b;
+        b = temp;
+        return [a, b];
+    }
+
+    swap(10, 5); // [5, 10]
+
+    // ES2015
+    function swap(a, b){
+        return [a, b] = [b, a];
+    }
+
+    swap(10, 5); // [5, 10]
+
+## RECAP
+- Two new keywords for declaring variables, let and const. Const ensures a variable cannot be redeclared, let gives block scope.
+- Evaluate variables in strings, and create multi-line strings with ES2015 template strings (Use backticks(``)).
+- Arrow functions (=>), these do not get their own 'this' and 'arguments' keyword.
+- Gather args to a function as an array with the rest operator. (...)
+- Spread out values in an array to another value or function with the spread operator. (...)
+- Write more concise methods and property names with shorthand notation and computer property names.
+- Object destructuring is useful for reducing duplication, and passing in default params as a destructured object.
+- Array destructuring can also be used for swapping variables in an array without a separate swap function
