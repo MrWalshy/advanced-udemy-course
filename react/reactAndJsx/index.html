@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Component 1</title>
+
+    <!-- React scripts -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom-factories@1.0.2/index.js"></script>
+</head>
+<body>
+    <div class="app"></div>
+    
+    <!-- This is very basic react -->
+    <script>
+        // Create a react comp. with a class extending 'React.Component'
+        class Pet extends React.Component {
+            render() {
+                // Sets h2 const to be a h2 with attr: null, text: "Moxie"
+                const h2 = ReactDOMFactories.h2(null, "Moxie");
+                const img = ReactDOMFactories.img({
+                    src: "https://github.com/tigarcia/Moxie/raw/master/moxie.png",
+                    alt: "Moxie, some guys cat"
+                });
+                // This returns the rendered specified tags in a div
+                return ReactDOMFactories.div(null, h2, img);
+            }
+        }
+
+        // react-dom is needed to render a react component
+        // tell it where to render
+        ReactDOM.render(React.createElement(Pet), document.querySelector(".app"));
+    </script>
+</body>
+</html>

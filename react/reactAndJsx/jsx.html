@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Component 1</title>
+    
+    <link rel="stylesheet" href="./jsx.css">
+    <!-- React scripts -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!-- Babel used to convert JSX -->
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    
+    <script type="text/babel"> // Tells Babel this is not normal JS
+        // Create a react comp. with a class extending 'React.Component'
+        class Pet extends React.Component {
+            render() {
+                const liStyle = {fontSize: '2em', margin: '2px'};
+                return (
+                    // This is JSX, all JSX tags MUST be closed!
+                    // Can be written like HTML
+                    // Use curly braces to evaluate JS
+                    <div className="card">
+                        <h2 className="name">Moxie</h2>
+                        <img src="https://github.com/tigarcia/Moxie/raw/master/moxie.png" alt="Moxie, some guys cat"></img>
+                        <h5>Hobbies:</h5>
+                        <ul>
+                            <li style={liStyle}>Sleep</li>
+                            <li style={liStyle}>Eat</li>
+                        </ul>
+                    </div>
+                )
+            }
+        }
+
+        // react-dom is needed to render a react component
+        // <Pet /> is JSX
+        ReactDOM.render(<Pet />, document.querySelector("#app"));
+    </script>
+</body>
+</html>

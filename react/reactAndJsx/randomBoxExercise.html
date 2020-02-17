@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Component 1</title>
+    
+    <!-- <link rel="stylesheet" href="./jsx.css"> -->
+    <!-- React scripts -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!-- Babel used to convert JSX -->
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    
+    <script type="text/babel">
+        class Box extends React.Component {
+            render() {
+                // ranNum = random0-1 * (max - min) + min
+                let ranNum = (Math.random() * (32 - 12) + 12).toString();
+                let ranColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                let ranColor2 = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                const box = {
+                    display: 'flex', 
+                    justifyContent: 'center', 
+                    alignItems: 'center', 
+                    width: '300px', 
+                    height: '180px', 
+                    fontSize: ranNum + 'px', 
+                    backgroundColor: ranColor
+                    };
+
+                return (
+                    <div>
+                        <div style={box}>
+                            <p>Random Box</p>
+                        </div>
+                    
+                        <div style={{...box, backgroundColor: ranColor2}}>
+                            <p>Random Box</p>
+                        </div>
+
+                        <div style={box}>
+                            <p>Random Box</p>
+                        </div>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(<Box />, document.querySelector("#app"))
+    </script>
+</body>
+</html>
